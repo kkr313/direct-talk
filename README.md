@@ -13,5 +13,3 @@ Overtalk supports the following URL params.
 | alwaysTalk | Enables the microphone by default | "true" |
 
 For any questions, please contact hello@overtalk.io.
-
-[Demo link](https://vasanthv.github.io/overtalk-embed/)
