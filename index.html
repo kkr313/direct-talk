@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Overtalk Embed Demo</title>
+    <title>Direct Talk</title>
     <!-- Link to Google Fonts for Roboto -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <style>
@@ -16,6 +16,7 @@
             align-items: center;
             min-height: 100vh;
             background-color: #f0f0f0;
+            position: relative;
         }
 
         .phone-frame {
@@ -71,6 +72,14 @@
             border-radius: 20px;
         }
 
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+
         @keyframes rotateGradient {
             0% {
                 background-position: 0% 0%;
@@ -90,8 +99,11 @@
 <body>
     <div class="phone-frame">
         <div class="phone-screen">
-            <iframe src="https://overtalk.io/kkr" allow="microphone;" seamless></iframe>
+            <iframe src="https://overtalk.io/embed" allow="microphone;" seamless></iframe>
         </div>
+    </div>
+    <div class="footer">
+        <p>Developed with ❤️ by Karan</p>
     </div>
 </body>
 </html>
