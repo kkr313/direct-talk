@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,26 +21,40 @@
         }
 
         .phone-frame {
-            width: 360px; /* Width of the phone frame */
-            height: 640px; /* Height of the phone frame */
-            border: 8px solid transparent; /* Transparent border to show gradient border */
-            border-radius: 36px; /* Rounded corners */
+            width: 360px;
+            /* Width of the phone frame */
+            height: 640px;
+            /* Height of the phone frame */
+            border: 8px solid transparent;
+            /* Transparent border to show gradient border */
+            border-radius: 36px;
+            /* Rounded corners */
             background-color: #fff;
             position: relative;
             overflow: hidden;
             background-image: linear-gradient(white, white),
-                              radial-gradient(circle, 
-                                  #ff0066, /* Red */
-                                  #ffcc00, /* Yellow */
-                                  #00ccff, /* Light Blue */
-                                  #00ff00, /* Green */
-                                  #000000, /* Black */
-                                  #ff0066, /* Red (cycle back to the start color) */
-                                  #00ccff /* Light Blue (continue rotation) */
-                              ); /* Gradient border */
+                radial-gradient(circle,
+                    #ff0066,
+                    /* Red */
+                    #ffcc00,
+                    /* Yellow */
+                    #00ccff,
+                    /* Light Blue */
+                    #00ff00,
+                    /* Green */
+                    #000000,
+                    /* Black */
+                    #ff0066,
+                    /* Red (cycle back to the start color) */
+                    #00ccff
+                    /* Light Blue (continue rotation) */
+                );
+            /* Gradient border */
             background-origin: border-box;
-            background-clip: content-box, border-box; /* Ensures gradient is applied to border */
-            animation: rotateGradient 4s infinite linear; /* Animate the gradient */
+            background-clip: content-box, border-box;
+            /* Ensures gradient is applied to border */
+            animation: rotateGradient 4s infinite linear;
+            /* Animate the gradient */
         }
 
         .phone-frame::before {
@@ -56,13 +71,19 @@
 
         .phone-screen {
             position: absolute;
-            top: 20px; /* Adjust based on the phone frame */
-            left: 10px; /* Adjust based on the phone frame */
+            top: 20px;
+            /* Adjust based on the phone frame */
+            left: 10px;
+            /* Adjust based on the phone frame */
             right: 10px;
             bottom: 10px;
             background-color: #fff;
             border-radius: 20px;
             overflow: hidden;
+        }
+
+        #chatwrap #chatContainer {
+            margin: auto;
         }
 
         iframe {
@@ -85,10 +106,12 @@
                 background-position: 0% 0%;
                 background-size: 200% 200%;
             }
+
             50% {
                 background-position: 100% 100%;
                 background-size: 200% 200%;
             }
+
             100% {
                 background-position: 0% 0%;
                 background-size: 200% 200%;
@@ -96,14 +119,17 @@
         }
     </style>
 </head>
+
 <body>
     <div class="phone-frame">
         <div class="phone-screen">
-            <iframe src="https://hello.vasanthv.me/kkr" allow="camera; microphone" seamless width="480" height="640" frameBorder="0"></iframe>
+            <iframe src="https://hello.vasanthv.me/ChitChat" allow="camera; microphone" seamless width="780" height="640"
+                frameBorder="0"></iframe>
         </div>
     </div>
     <div class="footer">
         <p>Developed with ❤️ by Karan</p>
     </div>
 </body>
+
 </html>
