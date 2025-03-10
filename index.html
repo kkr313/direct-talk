@@ -5,8 +5,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Direct Talk - A free walkie-talkie for the web.</title>
-    <!-- Link to Google Fonts for Roboto -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+    <!-- Link the manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Favicon -->
+    <link rel="icon" href="icons/icon-192x192.png" />
+
     <style>
         body {
             margin: 0;
@@ -22,39 +28,17 @@
 
         .phone-frame {
             width: 360px;
-            /* Width of the phone frame */
             height: 640px;
-            /* Height of the phone frame */
             border: 8px solid transparent;
-            /* Transparent border to show gradient border */
             border-radius: 36px;
-            /* Rounded corners */
             background-color: #fff;
             position: relative;
             overflow: hidden;
             background-image: linear-gradient(white, white),
-                radial-gradient(circle,
-                    #ff0066,
-                    /* Red */
-                    #ffcc00,
-                    /* Yellow */
-                    #00ccff,
-                    /* Light Blue */
-                    #00ff00,
-                    /* Green */
-                    #000000,
-                    /* Black */
-                    #ff0066,
-                    /* Red (cycle back to the start color) */
-                    #00ccff
-                    /* Light Blue (continue rotation) */
-                );
-            /* Gradient border */
+                radial-gradient(circle, #ff0066, #ffcc00, #00ccff, #00ff00, #000000, #ff0066, #00ccff);
             background-origin: border-box;
             background-clip: content-box, border-box;
-            /* Ensures gradient is applied to border */
             animation: rotateGradient 4s infinite linear;
-            /* Animate the gradient */
         }
 
         .phone-frame::before {
@@ -72,18 +56,12 @@
         .phone-screen {
             position: absolute;
             top: 20px;
-            /* Adjust based on the phone frame */
             left: 10px;
-            /* Adjust based on the phone frame */
             right: 10px;
             bottom: 10px;
             background-color: #fff;
             border-radius: 20px;
             overflow: hidden;
-        }
-
-        #chatwrap #chatContainer {
-            margin: auto;
         }
 
         iframe {
@@ -130,6 +108,15 @@
     <div class="footer">
         <p>Developed with ❤️ by Karan</p>
     </div>
+
+    <!-- Register the service worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(registration => console.log('Service Worker registered:', registration))
+                .catch(error => console.error('Service Worker registration failed:', error));
+        }
+    </script>
 </body>
 
 </html>
